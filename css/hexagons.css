@@ -3,7 +3,9 @@
     padding: 0;
 } */
 
-
+body{
+  background-image: url("pictures/hexaarrows.png");
+}
 
 h3{
   font-style: italic;

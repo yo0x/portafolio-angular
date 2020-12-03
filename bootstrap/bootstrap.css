@@ -7026,6 +7026,12 @@ button.bg-dark:focus {
   -ms-flex-align: center !important;
   align-items: center !important;
 }
+@media screen and (max-width: 575px){
+  .align-items-center {
+    -ms-flex-align: unset !important;
+    align-items: unset !important;
+  }
+}
 
 .align-items-baseline {
   -ms-flex-align: baseline !important;
