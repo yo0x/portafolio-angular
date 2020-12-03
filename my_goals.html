@@ -1,66 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Personal Protafolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/goals.css" />
+    <!-- Latest compiled and minified CSS -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
-    <style>
-      .fakeimg {
-        height: 200px;
-        background-image: url("https://thisartworkdoesnotexist.com/");
-      }
-    </style>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/66c0ec3420.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300"
+      rel="stylesheet"
+      type="text/css"
+    />
   </head>
-  <body>
-    <div class="jumbotron text-center" style="margin-bottom: 0">
-      <h1>Personal Portafolio</h1>
-      <p>Software engineer, pentester and HACKER</p>
-    </div>
-
-    <div class="container fluid" style="margin-top: 30px">
-      <div class="row">
-        <div class="col-sm-4">
-          <h3>Some Links</h3>
-          <p>Lorem ipsum dolor sit ame.</p>
-          <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">About me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">My Goals</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">My Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact me</a>
-            </li>
-          </ul>
-          <hr class="d-sm-none" />
-        </div>
-
-      <div>
-          <p>My Goals: </p>
-        <ul class="list-group">
-            <li class="list-group-item list-group-item-success">First item</li>
-            <li class="list-group-item list-group-item-warning">Second item</li>
-            <li class="list-group-item list-group-item-warning">Third item</li>
-            <li class="list-group-item list-group-item-warning">Fourth item</li>
-          </ul>
+  <body class="bg-primary">
+    <nav class="vertical-nav bg-white" id="sidebar" style="border: solid">
+      <div class="nav-buttons">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-center">
+            <a href="index.html">
+              <button type="button" class="btn btn-secondary">
+                <i class="far fa-address-card"></i><b>About me</b>
+              </button>
+            </a>
+          </li>
+          <li class="list-group-item d-flex justify-content-center">
+            <a href="projects.html">
+              <button type="button" class="btn btn-secondary">
+                <i class="fas fa-code-branch"></i><b>Projects</b>
+              </button>
+            </a>
+          </li>
+          <li class="list-group-item d-flex justify-content-center">
+            <a href="my_goals.html">
+              <button type="button" class="btn btn-secondary">
+                <i class="fas fa-tasks"></i><b>Goals</b>
+              </button>
+            </a>
+          </li>
+          <li class="list-group-item d-flex justify-content-center">
+            <a href="contact.html">
+              <button type="button" class="btn btn-secondary">
+                <i class="far fa-envelope-open"></i><b>Contact</b>
+              </button>
+            </a>
+          </li>
+        </ul>
       </div>
-    
+    </nav>
+    <div class="jumbotron jumbotron-fluid conta container-full">
+      <h1 class="display-1">This is me.</h1>
+      <p>Long life to the king of development</p>
+    </div>
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#goal1">Developing ann Android APP</a>
+      <div id="goal1" class="collapse container-full">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        pulvinar enim quis elit lacinia, ac accumsan quam aliquet. Fusce justo
+        nisl, hendrerit vel erat et, ullamcorper vestibulum metus. Aliquam erat
+        volutpat. Nullam interdum metus dictum elementum euismod. Fusce pulvinar
+        fermentum arcu, quis ornare nisi egestas eu. Etiam venenatis ipsum risus,
+        et porttitor quam sodales sed. Phasellus faucibus, felis vitae aliquam
+        eleifend, sapien arcu eleifend purus, et tempus diam quam nec tortor.
+        Proin eu leo ex. Maecenas in justo ac lectus venenatis mollis vel ut enim.
+        Maecenas fermentum semper erat in ultricies. Aenean eu viverra ante.
       </div>
-    </div>
-
-    <div class="jumbotron text-center" style="margin-bottom: 0">
-      <p>Footer WHAT TO DO HERE?</p>
-    </div>
+      <a href="#" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#goal2">Building AI Model</a>
+      <div id="goal2" class="collapse container-full">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        pulvinar enim quis elit lacinia, ac accumsan quam aliquet. Fusce justo
+        nisl, hendrerit vel erat et, ullamcorper vestibulum metus. Aliquam erat
+        volutpat. Nullam interdum metus dictum elementum euismod. Fusce pulvinar
+        fermentum arcu, quis ornare nisi egestas eu. Etiam venenatis ipsum risus,
+        et porttitor quam sodales sed. Phasellus faucibus, felis vitae aliquam
+        eleifend, sapien arcu eleifend purus, et tempus diam quam nec tortor.
+        Proin eu leo ex. Maecenas in justo ac lectus venenatis mollis vel ut enim.
+        Maecenas fermentum semper erat in ultricies. Aenean eu viverra ante.
+      </div><a href="#" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#goal3">Volunteering in code projects</a>
+      <div id="goal3" class="collapse container-full">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        pulvinar enim quis elit lacinia, ac accumsan quam aliquet. Fusce justo
+        nisl, hendrerit vel erat et, ullamcorper vestibulum metus. Aliquam erat
+        volutpat. Nullam interdum metus dictum elementum euismod. Fusce pulvinar
+        fermentum arcu, quis ornare nisi egestas eu. Etiam venenatis ipsum risus,
+        et porttitor quam sodales sed. Phasellus faucibus, felis vitae aliquam
+        eleifend, sapien arcu eleifend purus, et tempus diam quam nec tortor.
+        Proin eu leo ex. Maecenas in justo ac lectus venenatis mollis vel ut enim.
+        Maecenas fermentum semper erat in ultricies. Aenean eu viverra ante.
+      </div><a href="#" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#goal4">Picking some garbage at the the sea.</a>
+      <div id="goal4" class="collapse container-full">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        pulvinar enim quis elit lacinia, ac accumsan quam aliquet. Fusce justo
+        nisl, hendrerit vel erat et, ullamcorper vestibulum metus. Aliquam erat
+        volutpat. Nullam interdum metus dictum elementum euismod. Fusce pulvinar
+        fermentum arcu, quis ornare nisi egestas eu. Etiam venenatis ipsum risus,
+        et porttitor quam sodales sed. Phasellus faucibus, felis vitae aliquam
+        eleifend, sapien arcu eleifend purus, et tempus diam quam nec tortor.
+        Proin eu leo ex. Maecenas in justo ac lectus venenatis mollis vel ut enim.
+        Maecenas fermentum semper erat in ultricies. Aenean eu viverra ante.
+      </div>
+    </div> 
   </body>
 </html>
