@@ -1,0 +1,18 @@
+
+#_image{
+    width: 350px;
+}
+
+@media screen and (max-width: 575px){
+    #goals{
+        height: unset;
+        padding: unset;
+    }
+    #_image{
+        width: 340px;
+        padding: unset;
+    }
+    .bg-1{
+        padding: unset;
+    }
+}

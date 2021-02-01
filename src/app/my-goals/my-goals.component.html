@@ -1,0 +1,60 @@
+<div class="container-fluid" id="goals">
+  <div class="container-fluid bg-1 text-left">
+    
+    <h3>My GOALS.</h3>
+    <img
+      class="rounded-circle float-left"
+      id="_image"
+      src="https://thisartworkdoesnotexist.com/"
+      alt="Italian Trulli"
+    />
+    <div class="jumbotron jumbotron-fluid">
+      <h1>My GOALS</h1>
+    </div>
+    <div id="myTextOfMe">
+      <blockquote class="blockquote text-center">
+        <p class="mb-0">
+          My <strong>Goals</strong> are some duties that i am currently working
+          on and would like to share with you. Maybe you have the same interest
+          as me please keep in touch.
+        </p>
+      </blockquote>
+    </div>
+    <div class="input-control" style="display: grid;justify-content: end;">
+      <input type="text" class="form-control" style="width: 130px;" placeholder="Search..." [(ngModel)]="filterTerm">
+    </div>
+  </div>
+  <!-- <div class="jumbotron jumbotron-fluid conta container-full">
+        <h1 class="display-1">This is me.</h1>
+        <p>Long life to the king of development</p>
+      </div> -->
+  <!--LIST OF GOALS AFTER THIS-->
+  <div  class="row d-flex justify-content-center align-items-center">
+    <h2
+      style="
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      "
+    >
+      My GOALS
+    </h2>
+    <div *ngFor = 'let goal of goals$ | filter:filterTerm' id="accordion" style="width: 90%">
+      <div class="card">
+        <div class="card-header">
+          <a
+            class="card-link fas fa-check-double"
+            data-toggle="collapse"
+            href = "#{{goal.collapse_id}}"
+          >
+            {{goal.title}}
+          </a>
+        </div>
+        <div id="{{goal.collapse_id}}" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            {{goal.description}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

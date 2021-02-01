@@ -1,0 +1,51 @@
+<div class="row d-flex justify-content-center align-items-center" id="contact-frame">
+    <form #contactPost="ngForm" (ngSubmit)="onSubmit(contactPost.value)" class="bg-light">
+        <fieldset class="d-flex justify-content-center">
+            <div class="form-group">
+                <legend>Contact</legend>
+                <div class="input-control">
+                    <input type="text" class="form-control"  name="name" ngModel aria-describedby="nameHelp" placeholder="Your Name">
+                </div>              
+                <hr class="my-4">
+                <div class="input-control">
+                    <input type="text" class="form-control"  name="emailAddress" ngModel aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <hr class="my-4">
+                <div class="input-control">
+                    <input type="text" class="form-control"  name="subject" ngModel aria-describedby="subjectHelp" placeholder="Enter subject">
+                </div>
+                <hr class="my-4">
+                <label for="message">Message</label>
+                <textarea class="form-control"  name="message" ngModel rows="3" style="margin-top: 0px; margin-bottom: 0px; height: 108px;"></textarea>
+                <hr class="my-1">
+                <button type="submit" name="save" value="Save" class="btn btn-primary">
+                    <i class="far fa-paper-plane fa-lg"></i>
+                    Send
+                </button>
+            </div>
+            <jw-modal id="custom-modal-1">
+                <h1>Our backend have received: </h1>
+                <p>Latest messages: </p>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Subject</th>
+                      <th>Message</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let _contact of currentContacts$">
+                      <td>{{_contact.name}}</td>
+                      <td>{{_contact.emailAddress}}</td>
+                      <td>{{_contact.subject}}</td>
+                      <td>{{_contact.message}}</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                <button (click)="closeModal('custom-modal-1');">Close</button>
+            </jw-modal>
+        </fieldset>
+    </form>
+</div>

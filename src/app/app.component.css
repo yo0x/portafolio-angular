@@ -1,0 +1,52 @@
+#main_body{
+    background-image: url("../assets/pictures/hexaarrows.png");
+    background-color: #1a1a1a;
+    min-height: 100%;
+    position: relative;
+    display: grid;
+}
+ #content{
+    min-height: 95vh;
+    justify-self: end;
+    width: 90%;
+}
+app-navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 1450px){
+    #content{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 735px){
+    #content{
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width: 575px){
+
+    #main_body{
+        
+        display: block;
+    }
+    #content{
+        width: 100%;
+        height: fit-content;
+        min-height: fit-content;
+        justify-self: unset;
+        width: 100%;
+    }   
+    app-navbar{
+        position: unset;
+        top: unset;
+        left: unset;
+        min-height: unset;
+    }
+}
