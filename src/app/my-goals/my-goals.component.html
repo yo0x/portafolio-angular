@@ -1,13 +1,9 @@
 <div class="container-fluid" id="goals">
   <div class="container-fluid bg-1 text-left">
-    
+
     <h3>My GOALS.</h3>
-    <img
-      class="rounded-circle float-left"
-      id="_image"
-      src="https://thisartworkdoesnotexist.com/"
-      alt="Italian Trulli"
-    />
+    <img class="rounded-circle float-left" id="_image" src="https://thisartworkdoesnotexist.com/"
+      alt="Italian Trulli" />
     <div class="jumbotron jumbotron-fluid">
       <h1>My GOALS</h1>
     </div>
@@ -29,23 +25,22 @@
         <p>Long life to the king of development</p>
       </div> -->
   <!--LIST OF GOALS AFTER THIS-->
-  <div  class="row d-flex justify-content-center align-items-center">
-    <h2
-      style="
+  <div class="row d-flex justify-content-center align-items-center">
+    <h2 style="
         color: white;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      "
-    >
+      ">
       My GOALS
     </h2>
-    <div *ngFor = 'let goal of goals$ | filter:filterTerm' id="accordion" style="width: 90%">
+    <div *ngFor='let goal of goals$ | filter:filterTerm' id="accordion" style="width: 90%">
       <div class="card">
         <div class="card-header">
-          <a
-            class="card-link fas fa-check-double"
-            data-toggle="collapse"
-            href = "#{{goal.collapse_id}}"
-          >
+          <a *ngIf="goal.done" class="card-link" data-toggle="collapse" href="#{{goal.collapse_id}}">
+            <i class="fas fa-check-double" aria-hidden="true" style="color: green;"></i>
+            {{goal.title}}
+          </a>
+          <a *ngIf="!goal.done" class="card-link" data-toggle="collapse" href="#{{goal.collapse_id}}">
+            <i class="fas fa-check" aria-hidden="true" style="color: orange;"></i>
             {{goal.title}}
           </a>
         </div>

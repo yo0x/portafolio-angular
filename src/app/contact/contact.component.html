@@ -18,10 +18,17 @@
                 <label for="message">Message</label>
                 <textarea class="form-control"  name="message" ngModel rows="3" style="margin-top: 0px; margin-bottom: 0px; height: 108px;"></textarea>
                 <hr class="my-1">
-                <button type="submit" name="save" value="Save" class="btn btn-primary">
-                    <i class="far fa-paper-plane fa-lg"></i>
-                    Send
-                </button>
+                <div style="display:-ms-inline-grid">
+                    <button type="submit" name="save" value="Save" class="btn btn-primary" style="justify-self: start;">
+                        <i class="far fa-paper-plane fa-lg"></i>
+                        Send
+                    </button>
+                    <button class="btn btn-primary" (click)="onCheckDataBase()" style="justify-self: end;margin-left: 10px;">
+                        <i class="fa fa-database" aria-hidden="true"></i>
+                        Check DB
+                    </button>
+                </div>
+                
             </div>
             <jw-modal id="custom-modal-1">
                 <h1>Our backend have received: </h1>
@@ -44,7 +51,7 @@
                     </tr>
                     </tbody>
                   </table>
-                <button (click)="closeModal('custom-modal-1');">Close</button>
+                <button class="btn btn-primary" (click)="closeModal('custom-modal-1');">Close</button>
             </jw-modal>
         </fieldset>
     </form>

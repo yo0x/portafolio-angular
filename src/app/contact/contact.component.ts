@@ -23,8 +23,11 @@ export class ContactComponent implements OnInit {
     this.http.post('http://localhost:3000/contact', data).subscribe((data) => {
       console.warn(data);
     });
-    this.openModal('custom-modal-1');
+    
     //this.dataService.postContact(data);
+  }
+  onCheckDataBase(){
+    this.openModal('custom-modal-1');
   }
   openModal(id: string) {
     this.modalService.open(id);

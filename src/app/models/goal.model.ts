@@ -3,6 +3,4 @@ export class Goal {
     description:string = '';
     done:boolean = false;
     collapse_id:string = '';
-
-    
 }
